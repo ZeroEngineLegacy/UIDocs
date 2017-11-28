@@ -1,0 +1,16 @@
+class Menu : ZilchComponent
+{
+  [Property]
+  var TitlePath : CogPath;
+  [Property]
+  var ItemsPath : CogPath;
+  
+  var Title : Cog { get { return this.TitlePath.Cog; }}
+  var Items : Cog { get { return this.ItemsPath.Cog; }}
+  
+  
+  function Initialize(init : CogInitializer)
+  {
+    
+  }
+}
