@@ -1,16 +1,17 @@
 [Version:1]
 TextContent 
 {
-	ZilchScriptBuilder 
-	{
-		var Name = "Menu"
-		var ResourceId = 0x5a7618fc49dec89e
-	}
 	ContentTags 
 	{
 		var Tags = Array
 		{
+			"Ui"
 			"UiStuff"
 		}
+	}
+	ZilchScriptBuilder 
+	{
+		var Name = "Menu"
+		var ResourceId = 0x5a7618fc49dec89e
 	}
 }

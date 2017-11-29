@@ -1,16 +1,17 @@
 [Version:1]
 TextContent 
 {
-	ZilchScriptBuilder 
-	{
-		var Name = "UiWindow"
-		var ResourceId = 0x5a7c75240cf2b9e3
-	}
 	ContentTags 
 	{
 		var Tags = Array
 		{
+			"Ui"
 			"UiStuff"
 		}
+	}
+	ZilchScriptBuilder 
+	{
+		var Name = "UiWindow"
+		var ResourceId = 0x5a7c75240cf2b9e3
 	}
 }

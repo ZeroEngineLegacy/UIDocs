@@ -4,7 +4,7 @@ Cog
 	var Name = "MenuWindow"
 	Transform 
 	{
-		var Translation = Real3{221, 15, 3.81469727e-06}
+		var Translation = Real3{8, 8, 0}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
@@ -29,7 +29,7 @@ Cog
 	}
 	Area 
 	{
-		var Size = Real2{256, 256}
+		var Size = Real2{560, 308}
 		var Origin = Location.BottomLeft
 	}
 	UiWidget 
@@ -37,7 +37,7 @@ Cog
 		var Active = true
 		var Visible = true
 		var Interactive = true
-		var InLayout = false
+		var InLayout = true
 		var ClipChildren = true
 		var CanTakeFocus = false
 		var LocalColor = Real4{0.752941191, 0.752941191, 0.752941191, 1}
@@ -96,7 +96,7 @@ Cog
 			}
 			Area 
 			{
-				var Size = Real2{240, 240}
+				var Size = Real2{544, 292}
 				var Origin = Location.BottomLeft
 			}
 			UiWidget 
@@ -160,7 +160,7 @@ Cog
 					}
 					Area 
 					{
-						var Size = Real2{240, 240}
+						var Size = Real2{544, 292}
 						var Origin = Location.BottomLeft
 					}
 					UiWidget 
@@ -191,9 +191,9 @@ Cog
 				}
 			}
 		}
-		Cog [Id:0x5a75b42b236d6159]
+		Cog [Id:0x5a7dcef0d5920042]
 		{
-			var Name = "Menu"
+			var Name = "Menus"
 			Transform 
 			{
 				var Translation = Real3{8, 8, 0}
@@ -202,7 +202,7 @@ Cog
 			}
 			Area 
 			{
-				var Size = Real2{240, 240}
+				var Size = Real2{544, 292}
 				var Origin = Location.BottomLeft
 			}
 			UiWidget 
@@ -213,10 +213,10 @@ Cog
 				var InLayout = true
 				var ClipChildren = false
 				var CanTakeFocus = false
-				var LocalColor = Real4{0.600000024, 0.180000007, 0.318599999, 1}
+				var LocalColor = Real4{1, 1, 1, 1}
 				var HierarchyColor = Real4{1, 1, 1, 1}
-				var SizePolicyX = UiSizePolicy.Fixed
-				var SizePolicyY = UiSizePolicy.Fixed
+				var SizePolicyX = UiSizePolicy.Flex
+				var SizePolicyY = UiSizePolicy.Flex
 				var FlexSize = Real2{1, 1}
 				var AbsoluteMinSize = Real2{1, 1}
 				var VerticalAlignment = UiVerticalAlignment.Top
@@ -227,81 +227,27 @@ Cog
 				var MarginBottom = 0
 				var DockMode = UiDockMode.Left
 			}
-			UiStackLayout 
+			UiFillLayout 
 			{
-				var PaddingLeft = 4
-				var PaddingTop = 4
-				var PaddingRight = 4
-				var PaddingBottom = 4
-				var StackDirection = UiStackLayoutDirection.TopToBottom
-				var Spacing = Real2{0, 4}
-			}
-			Menu 
-			{
-				var TitlePath = CogPath
-				{
-					var Path = ""
-					var ErrorOnResolveToNull = false
-					var ErrorOnPathCantCompute = false
-					var ErrorOnDirectLinkFail = false
-					var UpdateCogOnPathChange = true
-					var UpdatePathOnCogChange = true
-					var UpdateCogOnInitialize = true
-					var ResolvedNullErrorOccurred = false
-					var Cog = 4294967293
-					var PathPreference0 = CogPathPreference.CogRelative
-					var PathPreference1 = CogPathPreference.SpaceRelative
-					var PathPreference2 = CogPathPreference.Absolute
-				}
-				var ItemsPath = CogPath
-				{
-					var Path = ""
-					var ErrorOnResolveToNull = false
-					var ErrorOnPathCantCompute = false
-					var ErrorOnDirectLinkFail = false
-					var UpdateCogOnPathChange = true
-					var UpdatePathOnCogChange = true
-					var UpdateCogOnInitialize = true
-					var ResolvedNullErrorOccurred = false
-					var Cog = 4294967293
-					var PathPreference0 = CogPathPreference.CogRelative
-					var PathPreference1 = CogPathPreference.SpaceRelative
-					var PathPreference2 = CogPathPreference.Absolute
-				}
+				var PaddingLeft = 0
+				var PaddingTop = 0
+				var PaddingRight = 0
+				var PaddingBottom = 0
 			}
 			Hierarchy 
 			{
-				Cog [Id:0x5a7353e9bdce3920]
+				Cog [Id:0x5a7dcea1ac24d71c]
 				{
-					var Name = "MenuTitle"
+					var Name = "InventoryMenu"
 					Transform 
 					{
-						var Translation = Real3{4, 196, 0}
+						var Translation = Real3{0, 0, 0}
 						var Scale = Real3{1, 1, 1}
 						var Rotation = Quaternion{0, 0, 0, 1}
 					}
-					Sprite 
-					{
-						var Visible = true
-						var ViewCulling = true
-						var VisibilityEvents = true
-						var OverrideBoundingBox = false
-						var LocalAabbCenter = Real3{0, 0, 0}
-						var LocalAabbHalfExtents = Real3{1, 1, 1}
-						var GroupSortValue = 0
-						var Material = "582c575af53d18c9:AlphaSprite"
-						var VertexColor = Real4{1, 1, 1, 0.75}
-						var GeometryMode = SpriteGeometryMode.ZPlane
-						var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
-						var FlipX = false
-						var FlipY = false
-						var AnimationActive = true
-						var AnimationSpeed = 1
-						var StartFrame = 0
-					}
 					Area 
 					{
-						var Size = Real2{232, 40}
+						var Size = Real2{544, 292}
 						var Origin = Location.BottomLeft
 					}
 					UiWidget 
@@ -312,119 +258,7 @@ Cog
 						var InLayout = true
 						var ClipChildren = false
 						var CanTakeFocus = false
-						var LocalColor = Real4{1, 1, 1, 0.75}
-						var HierarchyColor = Real4{1, 1, 1, 1}
-						var SizePolicyX = UiSizePolicy.Flex
-						var SizePolicyY = UiSizePolicy.Fixed
-						var FlexSize = Real2{1, 1}
-						var AbsoluteMinSize = Real2{1, 1}
-						var VerticalAlignment = UiVerticalAlignment.Top
-						var HorizontalAlignment = UiHorizontalAlignment.Left
-						var MarginLeft = 0
-						var MarginTop = 0
-						var MarginRight = 0
-						var MarginBottom = 0
-						var DockMode = UiDockMode.Left
-					}
-					UiFillLayout 
-					{
-						var PaddingLeft = 8
-						var PaddingTop = 0
-						var PaddingRight = 0
-						var PaddingBottom = 0
-					}
-					Hierarchy 
-					{
-						Cog [Id:0x5a735abf2bd3ace4]
-						{
-							var Name = "UiShadowedText"
-							Transform 
-							{
-								var Translation = Real3{8, 1, 0}
-								var Scale = Real3{1, 1, 1}
-								var Rotation = Quaternion{0, 0, 0, 1}
-							}
-							SpriteText 
-							{
-								var Visible = false
-								var ViewCulling = true
-								var VisibilityEvents = true
-								var OverrideBoundingBox = false
-								var LocalAabbCenter = Real3{0, 0, 0}
-								var LocalAabbHalfExtents = Real3{1, 1, 1}
-								var GroupSortValue = 0
-								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 1}
-								var GeometryMode = SpriteGeometryMode.ZPlane
-								var Text = "Party Menu"
-								var Font = "587b2f7646ba23d5:NotoSans-Bold"
-								var FontSize = 28
-								var PixelsPerUnit = 1
-								var TextAlign = TextAlign.Left
-							}
-							Area 
-							{
-								var Size = Real2{162, 38}
-								var Origin = Location.BottomLeft
-							}
-							UiWidget 
-							{
-								var Active = true
-								var Visible = true
-								var Interactive = true
-								var InLayout = true
-								var ClipChildren = false
-								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 1}
-								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Fixed
-								var FlexSize = Real2{1, 1}
-								var AbsoluteMinSize = Real2{1, 1}
-								var VerticalAlignment = UiVerticalAlignment.Center
-								var HorizontalAlignment = UiHorizontalAlignment.Left
-								var MarginLeft = 0
-								var MarginTop = 0
-								var MarginRight = 0
-								var MarginBottom = 0
-								var DockMode = UiDockMode.Left
-							}
-							UiTextShadow 
-							{
-								var ShadowColor = Real4{0, 0, 0, 0.75}
-								var Offset = Real2{1, -1}
-								var CoverArchetype = "59b85fdaced18491:UiSpriteText"
-								var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
-							}
-							Hierarchy 
-							{
-							}
-						}
-					}
-				}
-				Cog [Id:0x5a75d0bb9b954316]
-				{
-					var Name = "MenuItems"
-					Transform 
-					{
-						var Translation = Real3{4, 4, 0}
-						var Scale = Real3{1, 1, 1}
-						var Rotation = Quaternion{0, 0, 0, 1}
-					}
-					Area 
-					{
-						var Size = Real2{232, 188}
-						var Origin = Location.BottomLeft
-					}
-					UiWidget 
-					{
-						var Active = true
-						var Visible = true
-						var Interactive = true
-						var InLayout = true
-						var ClipChildren = false
-						var CanTakeFocus = false
-						var LocalColor = Real4{0, 0, 0, 0.745000005}
+						var LocalColor = Real4{0.600000024, 0.180000007, 0.318599999, 1}
 						var HierarchyColor = Real4{1, 1, 1, 1}
 						var SizePolicyX = UiSizePolicy.Flex
 						var SizePolicyY = UiSizePolicy.Flex
@@ -440,21 +274,54 @@ Cog
 					}
 					UiStackLayout 
 					{
-						var PaddingLeft = 0
-						var PaddingTop = 0
-						var PaddingRight = 0
-						var PaddingBottom = 0
+						var PaddingLeft = 4
+						var PaddingTop = 4
+						var PaddingRight = 4
+						var PaddingBottom = 4
 						var StackDirection = UiStackLayoutDirection.TopToBottom
 						var Spacing = Real2{0, 4}
 					}
+					Menu 
+					{
+						var TitlePath = CogPath
+						{
+							var Path = "MenuTitle"
+							var ErrorOnResolveToNull = false
+							var ErrorOnPathCantCompute = false
+							var ErrorOnDirectLinkFail = false
+							var UpdateCogOnPathChange = true
+							var UpdatePathOnCogChange = true
+							var UpdateCogOnInitialize = true
+							var ResolvedNullErrorOccurred = false
+							var Cog = 4294967293
+							var PathPreference0 = CogPathPreference.CogRelative
+							var PathPreference1 = CogPathPreference.SpaceRelative
+							var PathPreference2 = CogPathPreference.Absolute
+						}
+						var ItemsPath = CogPath
+						{
+							var Path = "MenuItems"
+							var ErrorOnResolveToNull = false
+							var ErrorOnPathCantCompute = false
+							var ErrorOnDirectLinkFail = false
+							var UpdateCogOnPathChange = true
+							var UpdatePathOnCogChange = true
+							var UpdateCogOnInitialize = true
+							var ResolvedNullErrorOccurred = false
+							var Cog = 4294967293
+							var PathPreference0 = CogPathPreference.CogRelative
+							var PathPreference1 = CogPathPreference.SpaceRelative
+							var PathPreference2 = CogPathPreference.Absolute
+						}
+					}
 					Hierarchy 
 					{
-						Cog [Id:0x5a75b421227d4b22]
+						Cog [Id:0x5a7353e9bdce3920]
 						{
-							var Name = "MenuItem"
+							var Name = "MenuTitle"
 							Transform 
 							{
-								var Translation = Real3{0, 160, 0}
+								var Translation = Real3{4, 248, 0}
 								var Scale = Real3{1, 1, 1}
 								var Rotation = Quaternion{0, 0, 0, 1}
 							}
@@ -468,7 +335,7 @@ Cog
 								var LocalAabbHalfExtents = Real3{1, 1, 1}
 								var GroupSortValue = 0
 								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
+								var VertexColor = Real4{1, 1, 1, 0.75}
 								var GeometryMode = SpriteGeometryMode.ZPlane
 								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
 								var FlipX = false
@@ -479,7 +346,7 @@ Cog
 							}
 							Area 
 							{
-								var Size = Real2{150, 28}
+								var Size = Real2{536, 40}
 								var Origin = Location.BottomLeft
 							}
 							UiWidget 
@@ -490,10 +357,10 @@ Cog
 								var InLayout = true
 								var ClipChildren = false
 								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
+								var LocalColor = Real4{1, 1, 1, 0.75}
 								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Flex
+								var SizePolicyX = UiSizePolicy.Flex
+								var SizePolicyY = UiSizePolicy.Fixed
 								var FlexSize = Real2{1, 1}
 								var AbsoluteMinSize = Real2{1, 1}
 								var VerticalAlignment = UiVerticalAlignment.Top
@@ -511,48 +378,14 @@ Cog
 								var PaddingRight = 0
 								var PaddingBottom = 0
 							}
-							MenuItem 
-							{
-								var Enabled = true
-								var TextPath = CogPath
-								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-							}
 							Hierarchy 
 							{
-								Cog [Id:0x5a75b82777843542]
+								Cog [Id:0x5a735abf2bd3ace4]
 								{
 									var Name = "UiShadowedText"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{8, 1, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
@@ -570,13 +403,13 @@ Cog
 										var GeometryMode = SpriteGeometryMode.ZPlane
 										var Text = "Inventory"
 										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
+										var FontSize = 28
 										var PixelsPerUnit = 1
 										var TextAlign = TextAlign.Left
 									}
 									Area 
 									{
-										var Size = Real2{119, 33}
+										var Size = Real2{162, 38}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -614,12 +447,308 @@ Cog
 								}
 							}
 						}
-						Cog [Id:0x5a75b421227d4f72]
+						Cog [Id:0x5a75d0bb9b954316]
 						{
-							var Name = "MenuItem"
+							var Name = "MenuItems"
 							Transform 
 							{
-								var Translation = Real3{0, 128, 0}
+								var Translation = Real3{4, 4, 0}
+								var Scale = Real3{1, 1, 1}
+								var Rotation = Quaternion{0, 0, 0, 1}
+							}
+							Area 
+							{
+								var Size = Real2{536, 240}
+								var Origin = Location.BottomLeft
+							}
+							UiWidget 
+							{
+								var Active = true
+								var Visible = true
+								var Interactive = true
+								var InLayout = true
+								var ClipChildren = false
+								var CanTakeFocus = false
+								var LocalColor = Real4{0, 0, 0, 0.745000005}
+								var HierarchyColor = Real4{1, 1, 1, 1}
+								var SizePolicyX = UiSizePolicy.Flex
+								var SizePolicyY = UiSizePolicy.Flex
+								var FlexSize = Real2{1, 1}
+								var AbsoluteMinSize = Real2{1, 1}
+								var VerticalAlignment = UiVerticalAlignment.Top
+								var HorizontalAlignment = UiHorizontalAlignment.Left
+								var MarginLeft = 0
+								var MarginTop = 0
+								var MarginRight = 0
+								var MarginBottom = 0
+								var DockMode = UiDockMode.Left
+							}
+							UiStackLayout 
+							{
+								var PaddingLeft = 0
+								var PaddingTop = 0
+								var PaddingRight = 0
+								var PaddingBottom = 0
+								var StackDirection = UiStackLayoutDirection.TopToBottom
+								var Spacing = Real2{0, 4}
+							}
+							Hierarchy 
+							{
+								Cog [Id:0x5a75b421227d4b22]
+								{
+									var Name = "InventoryItem"
+									Transform 
+									{
+										var Translation = Real3{0, 212, 0}
+										var Scale = Real3{1, 1, 1}
+										var Rotation = Quaternion{0, 0, 0, 1}
+									}
+									Sprite 
+									{
+										var Visible = true
+										var ViewCulling = true
+										var VisibilityEvents = true
+										var OverrideBoundingBox = false
+										var LocalAabbCenter = Real3{0, 0, 0}
+										var LocalAabbHalfExtents = Real3{1, 1, 1}
+										var GroupSortValue = 0
+										var Material = "582c575af53d18c9:AlphaSprite"
+										var VertexColor = Real4{1, 1, 1, 0.25}
+										var GeometryMode = SpriteGeometryMode.ZPlane
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
+									}
+									Area 
+									{
+										var Size = Real2{200, 28}
+										var Origin = Location.BottomLeft
+									}
+									UiWidget 
+									{
+										var Active = true
+										var Visible = true
+										var Interactive = true
+										var InLayout = true
+										var ClipChildren = false
+										var CanTakeFocus = false
+										var LocalColor = Real4{1, 1, 1, 0.25}
+										var HierarchyColor = Real4{1, 1, 1, 1}
+										var SizePolicyX = UiSizePolicy.Fixed
+										var SizePolicyY = UiSizePolicy.Fixed
+										var FlexSize = Real2{1, 1}
+										var AbsoluteMinSize = Real2{1, 1}
+										var VerticalAlignment = UiVerticalAlignment.Top
+										var HorizontalAlignment = UiHorizontalAlignment.Left
+										var MarginLeft = 0
+										var MarginTop = 0
+										var MarginRight = 0
+										var MarginBottom = 0
+										var DockMode = UiDockMode.Left
+									}
+									UiFillLayout 
+									{
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+									}
+									Hierarchy 
+									{
+										Cog [Id:0x5a75b82777843542]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Inventory"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{119, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				Cog [Id:0x5a7dceb6a9296739]
+				{
+					var Name = "PartyMenu"
+					Transform 
+					{
+						var Translation = Real3{0, 0, 0}
+						var Scale = Real3{1, 1, 1}
+						var Rotation = Quaternion{0, 0, 0, 1}
+					}
+					Area 
+					{
+						var Size = Real2{544, 292}
+						var Origin = Location.BottomLeft
+					}
+					UiWidget 
+					{
+						var Active = false
+						var Visible = true
+						var Interactive = true
+						var InLayout = true
+						var ClipChildren = false
+						var CanTakeFocus = false
+						var LocalColor = Real4{0.600000024, 0.180000007, 0.318599999, 1}
+						var HierarchyColor = Real4{1, 1, 1, 1}
+						var SizePolicyX = UiSizePolicy.Flex
+						var SizePolicyY = UiSizePolicy.Flex
+						var FlexSize = Real2{1, 1}
+						var AbsoluteMinSize = Real2{1, 1}
+						var VerticalAlignment = UiVerticalAlignment.Top
+						var HorizontalAlignment = UiHorizontalAlignment.Left
+						var MarginLeft = 0
+						var MarginTop = 0
+						var MarginRight = 0
+						var MarginBottom = 0
+						var DockMode = UiDockMode.Left
+					}
+					UiStackLayout 
+					{
+						var PaddingLeft = 4
+						var PaddingTop = 4
+						var PaddingRight = 4
+						var PaddingBottom = 4
+						var StackDirection = UiStackLayoutDirection.TopToBottom
+						var Spacing = Real2{0, 4}
+					}
+					Menu 
+					{
+						var TitlePath = CogPath
+						{
+							var Path = "MenuTitle"
+							var ErrorOnResolveToNull = false
+							var ErrorOnPathCantCompute = false
+							var ErrorOnDirectLinkFail = false
+							var UpdateCogOnPathChange = true
+							var UpdatePathOnCogChange = true
+							var UpdateCogOnInitialize = true
+							var ResolvedNullErrorOccurred = false
+							var Cog = 4294967293
+							var PathPreference0 = CogPathPreference.CogRelative
+							var PathPreference1 = CogPathPreference.SpaceRelative
+							var PathPreference2 = CogPathPreference.Absolute
+						}
+						var ItemsPath = CogPath
+						{
+							var Path = "MenuItems"
+							var ErrorOnResolveToNull = false
+							var ErrorOnPathCantCompute = false
+							var ErrorOnDirectLinkFail = false
+							var UpdateCogOnPathChange = true
+							var UpdatePathOnCogChange = true
+							var UpdateCogOnInitialize = true
+							var ResolvedNullErrorOccurred = false
+							var Cog = 4294967293
+							var PathPreference0 = CogPathPreference.CogRelative
+							var PathPreference1 = CogPathPreference.SpaceRelative
+							var PathPreference2 = CogPathPreference.Absolute
+						}
+					}
+					Hierarchy 
+					{
+						Cog [Id:0x5a7353e9bdce3920]
+						{
+							var Name = "MenuTitle"
+							Transform 
+							{
+								var Translation = Real3{4, 248, 0}
 								var Scale = Real3{1, 1, 1}
 								var Rotation = Quaternion{0, 0, 0, 1}
 							}
@@ -633,7 +762,7 @@ Cog
 								var LocalAabbHalfExtents = Real3{1, 1, 1}
 								var GroupSortValue = 0
 								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
+								var VertexColor = Real4{1, 1, 1, 0.75}
 								var GeometryMode = SpriteGeometryMode.ZPlane
 								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
 								var FlipX = false
@@ -644,7 +773,7 @@ Cog
 							}
 							Area 
 							{
-								var Size = Real2{150, 28}
+								var Size = Real2{536, 40}
 								var Origin = Location.BottomLeft
 							}
 							UiWidget 
@@ -655,10 +784,10 @@ Cog
 								var InLayout = true
 								var ClipChildren = false
 								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
+								var LocalColor = Real4{1, 1, 1, 0.75}
 								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Flex
+								var SizePolicyX = UiSizePolicy.Flex
+								var SizePolicyY = UiSizePolicy.Fixed
 								var FlexSize = Real2{1, 1}
 								var AbsoluteMinSize = Real2{1, 1}
 								var VerticalAlignment = UiVerticalAlignment.Top
@@ -676,48 +805,14 @@ Cog
 								var PaddingRight = 0
 								var PaddingBottom = 0
 							}
-							MenuItem 
-							{
-								var Enabled = true
-								var TextPath = CogPath
-								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-							}
 							Hierarchy 
 							{
-								Cog [Id:0x5a75b8cc46e7739e]
+								Cog [Id:0x5a735abf2bd3ace4]
 								{
 									var Name = "UiShadowedText"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{8, 1, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
@@ -733,15 +828,15 @@ Cog
 										var Material = "582c575af53d18c9:AlphaSprite"
 										var VertexColor = Real4{1, 1, 1, 1}
 										var GeometryMode = SpriteGeometryMode.ZPlane
-										var Text = "Equipment"
+										var Text = "Party Menu"
 										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
+										var FontSize = 28
 										var PixelsPerUnit = 1
 										var TextAlign = TextAlign.Left
 									}
 									Area 
 									{
-										var Size = Real2{130, 33}
+										var Size = Real2{162, 38}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -779,37 +874,18 @@ Cog
 								}
 							}
 						}
-						Cog [Id:0x5a75b421227d5322]
+						Cog [Id:0x5a75d0bb9b954316]
 						{
-							var Name = "MenuItem"
+							var Name = "MenuItems"
 							Transform 
 							{
-								var Translation = Real3{0, 96, 0}
+								var Translation = Real3{4, 4, 0}
 								var Scale = Real3{1, 1, 1}
 								var Rotation = Quaternion{0, 0, 0, 1}
 							}
-							Sprite 
-							{
-								var Visible = true
-								var ViewCulling = true
-								var VisibilityEvents = true
-								var OverrideBoundingBox = false
-								var LocalAabbCenter = Real3{0, 0, 0}
-								var LocalAabbHalfExtents = Real3{1, 1, 1}
-								var GroupSortValue = 0
-								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
-								var GeometryMode = SpriteGeometryMode.ZPlane
-								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
-								var FlipX = false
-								var FlipY = false
-								var AnimationActive = true
-								var AnimationSpeed = 1
-								var StartFrame = 0
-							}
 							Area 
 							{
-								var Size = Real2{150, 28}
+								var Size = Real2{536, 240}
 								var Origin = Location.BottomLeft
 							}
 							UiWidget 
@@ -817,12 +893,12 @@ Cog
 								var Active = true
 								var Visible = true
 								var Interactive = true
-								var InLayout = true
+								var InLayout = false
 								var ClipChildren = false
 								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
+								var LocalColor = Real4{0, 0, 0, 0.745000005}
 								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
+								var SizePolicyX = UiSizePolicy.Flex
 								var SizePolicyY = UiSizePolicy.Flex
 								var FlexSize = Real2{1, 1}
 								var AbsoluteMinSize = Real2{1, 1}
@@ -834,61 +910,29 @@ Cog
 								var MarginBottom = 0
 								var DockMode = UiDockMode.Left
 							}
-							UiFillLayout 
+							UiStackLayout 
 							{
-								var PaddingLeft = 8
+								var PaddingLeft = 0
 								var PaddingTop = 0
 								var PaddingRight = 0
 								var PaddingBottom = 0
-							}
-							MenuItem 
-							{
-								var Enabled = true
-								var TextPath = CogPath
-								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
+								var StackDirection = UiStackLayoutDirection.TopToBottom
+								var Spacing = Real2{0, 4}
 							}
 							Hierarchy 
 							{
-								Cog [Id:0x5a75b8cc46e773ac]
+								Cog [Id:0x5a75b421227d4b22]
 								{
-									var Name = "UiShadowedText"
+									var Name = "MenuItem"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{0, 212, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
-									SpriteText 
+									Sprite 
 									{
-										var Visible = false
+										var Visible = true
 										var ViewCulling = true
 										var VisibilityEvents = true
 										var OverrideBoundingBox = false
@@ -896,17 +940,18 @@ Cog
 										var LocalAabbHalfExtents = Real3{1, 1, 1}
 										var GroupSortValue = 0
 										var Material = "582c575af53d18c9:AlphaSprite"
-										var VertexColor = Real4{1, 1, 1, 1}
+										var VertexColor = Real4{1, 1, 1, 0.25}
 										var GeometryMode = SpriteGeometryMode.ZPlane
-										var Text = "Magic"
-										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
-										var PixelsPerUnit = 1
-										var TextAlign = TextAlign.Left
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
 									}
 									Area 
 									{
-										var Size = Real2{72, 33}
+										var Size = Real2{200, 28}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -917,13 +962,13 @@ Cog
 										var InLayout = true
 										var ClipChildren = false
 										var CanTakeFocus = false
-										var LocalColor = Real4{1, 1, 1, 1}
+										var LocalColor = Real4{1, 1, 1, 0.25}
 										var HierarchyColor = Real4{1, 1, 1, 1}
 										var SizePolicyX = UiSizePolicy.Fixed
 										var SizePolicyY = UiSizePolicy.Fixed
 										var FlexSize = Real2{1, 1}
 										var AbsoluteMinSize = Real2{1, 1}
-										var VerticalAlignment = UiVerticalAlignment.Center
+										var VerticalAlignment = UiVerticalAlignment.Top
 										var HorizontalAlignment = UiHorizontalAlignment.Left
 										var MarginLeft = 0
 										var MarginTop = 0
@@ -931,129 +976,128 @@ Cog
 										var MarginBottom = 0
 										var DockMode = UiDockMode.Left
 									}
-									UiTextShadow 
+									UiFillLayout 
 									{
-										var ShadowColor = Real4{0, 0, 0, 0.75}
-										var Offset = Real2{1, -1}
-										var CoverArchetype = "59b85fdaced18491:UiSpriteText"
-										var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
 									}
 									Hierarchy 
 									{
+										Cog [Id:0x5a75b82777843542]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Inventory"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{119, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
 									}
 								}
-							}
-						}
-						Cog [Id:0x5a6f3d9c8c74e16d]
-						{
-							var Name = "MenuItem"
-							Transform 
-							{
-								var Translation = Real3{0, 64, 0}
-								var Scale = Real3{1, 1, 1}
-								var Rotation = Quaternion{0, 0, 0, 1}
-							}
-							Sprite 
-							{
-								var Visible = true
-								var ViewCulling = true
-								var VisibilityEvents = true
-								var OverrideBoundingBox = false
-								var LocalAabbCenter = Real3{0, 0, 0}
-								var LocalAabbHalfExtents = Real3{1, 1, 1}
-								var GroupSortValue = 0
-								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
-								var GeometryMode = SpriteGeometryMode.ZPlane
-								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
-								var FlipX = false
-								var FlipY = false
-								var AnimationActive = true
-								var AnimationSpeed = 1
-								var StartFrame = 0
-							}
-							Area 
-							{
-								var Size = Real2{150, 28}
-								var Origin = Location.BottomLeft
-							}
-							UiWidget 
-							{
-								var Active = true
-								var Visible = true
-								var Interactive = true
-								var InLayout = true
-								var ClipChildren = false
-								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
-								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Flex
-								var FlexSize = Real2{1, 1}
-								var AbsoluteMinSize = Real2{1, 1}
-								var VerticalAlignment = UiVerticalAlignment.Top
-								var HorizontalAlignment = UiHorizontalAlignment.Left
-								var MarginLeft = 0
-								var MarginTop = 0
-								var MarginRight = 0
-								var MarginBottom = 0
-								var DockMode = UiDockMode.Left
-							}
-							UiFillLayout 
-							{
-								var PaddingLeft = 8
-								var PaddingTop = 0
-								var PaddingRight = 0
-								var PaddingBottom = 0
-							}
-							MenuItem 
-							{
-								var Enabled = true
-								var TextPath = CogPath
+								Cog [Id:0x5a75b421227d4f72]
 								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-							}
-							Hierarchy 
-							{
-								Cog [Id:0x5a75b8cc46e773b9]
-								{
-									var Name = "UiShadowedText"
+									var Name = "MenuItem"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{0, 180, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
-									SpriteText 
+									Sprite 
 									{
-										var Visible = false
+										var Visible = true
 										var ViewCulling = true
 										var VisibilityEvents = true
 										var OverrideBoundingBox = false
@@ -1061,17 +1105,18 @@ Cog
 										var LocalAabbHalfExtents = Real3{1, 1, 1}
 										var GroupSortValue = 0
 										var Material = "582c575af53d18c9:AlphaSprite"
-										var VertexColor = Real4{1, 1, 1, 1}
+										var VertexColor = Real4{1, 1, 1, 0.25}
 										var GeometryMode = SpriteGeometryMode.ZPlane
-										var Text = "Status"
-										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
-										var PixelsPerUnit = 1
-										var TextAlign = TextAlign.Left
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
 									}
 									Area 
 									{
-										var Size = Real2{76, 33}
+										var Size = Real2{200, 28}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -1082,13 +1127,13 @@ Cog
 										var InLayout = true
 										var ClipChildren = false
 										var CanTakeFocus = false
-										var LocalColor = Real4{1, 1, 1, 1}
+										var LocalColor = Real4{1, 1, 1, 0.25}
 										var HierarchyColor = Real4{1, 1, 1, 1}
 										var SizePolicyX = UiSizePolicy.Fixed
 										var SizePolicyY = UiSizePolicy.Fixed
 										var FlexSize = Real2{1, 1}
 										var AbsoluteMinSize = Real2{1, 1}
-										var VerticalAlignment = UiVerticalAlignment.Center
+										var VerticalAlignment = UiVerticalAlignment.Top
 										var HorizontalAlignment = UiHorizontalAlignment.Left
 										var MarginLeft = 0
 										var MarginTop = 0
@@ -1096,129 +1141,128 @@ Cog
 										var MarginBottom = 0
 										var DockMode = UiDockMode.Left
 									}
-									UiTextShadow 
+									UiFillLayout 
 									{
-										var ShadowColor = Real4{0, 0, 0, 0.75}
-										var Offset = Real2{1, -1}
-										var CoverArchetype = "59b85fdaced18491:UiSpriteText"
-										var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
 									}
 									Hierarchy 
 									{
+										Cog [Id:0x5a75b8cc46e7739e]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Equipment"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{130, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
 									}
 								}
-							}
-						}
-						Cog [Id:0x5a75b421227d5a21]
-						{
-							var Name = "MenuItem"
-							Transform 
-							{
-								var Translation = Real3{0, 32, 0}
-								var Scale = Real3{1, 1, 1}
-								var Rotation = Quaternion{0, 0, 0, 1}
-							}
-							Sprite 
-							{
-								var Visible = true
-								var ViewCulling = true
-								var VisibilityEvents = true
-								var OverrideBoundingBox = false
-								var LocalAabbCenter = Real3{0, 0, 0}
-								var LocalAabbHalfExtents = Real3{1, 1, 1}
-								var GroupSortValue = 0
-								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
-								var GeometryMode = SpriteGeometryMode.ZPlane
-								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
-								var FlipX = false
-								var FlipY = false
-								var AnimationActive = true
-								var AnimationSpeed = 1
-								var StartFrame = 0
-							}
-							Area 
-							{
-								var Size = Real2{150, 28}
-								var Origin = Location.BottomLeft
-							}
-							UiWidget 
-							{
-								var Active = true
-								var Visible = true
-								var Interactive = true
-								var InLayout = true
-								var ClipChildren = false
-								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
-								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Flex
-								var FlexSize = Real2{1, 1}
-								var AbsoluteMinSize = Real2{1, 1}
-								var VerticalAlignment = UiVerticalAlignment.Top
-								var HorizontalAlignment = UiHorizontalAlignment.Left
-								var MarginLeft = 0
-								var MarginTop = 0
-								var MarginRight = 0
-								var MarginBottom = 0
-								var DockMode = UiDockMode.Left
-							}
-							UiFillLayout 
-							{
-								var PaddingLeft = 8
-								var PaddingTop = 0
-								var PaddingRight = 0
-								var PaddingBottom = 0
-							}
-							MenuItem 
-							{
-								var Enabled = true
-								var TextPath = CogPath
+								Cog [Id:0x5a75b421227d5322]
 								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-							}
-							Hierarchy 
-							{
-								Cog [Id:0x5a75b8cc46e773c6]
-								{
-									var Name = "UiShadowedText"
+									var Name = "MenuItem"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{0, 148, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
-									SpriteText 
+									Sprite 
 									{
-										var Visible = false
+										var Visible = true
 										var ViewCulling = true
 										var VisibilityEvents = true
 										var OverrideBoundingBox = false
@@ -1226,17 +1270,18 @@ Cog
 										var LocalAabbHalfExtents = Real3{1, 1, 1}
 										var GroupSortValue = 0
 										var Material = "582c575af53d18c9:AlphaSprite"
-										var VertexColor = Real4{1, 1, 1, 1}
+										var VertexColor = Real4{1, 1, 1, 0.25}
 										var GeometryMode = SpriteGeometryMode.ZPlane
-										var Text = "Formation"
-										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
-										var PixelsPerUnit = 1
-										var TextAlign = TextAlign.Left
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
 									}
 									Area 
 									{
-										var Size = Real2{126, 33}
+										var Size = Real2{200, 28}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -1247,13 +1292,13 @@ Cog
 										var InLayout = true
 										var ClipChildren = false
 										var CanTakeFocus = false
-										var LocalColor = Real4{1, 1, 1, 1}
+										var LocalColor = Real4{1, 1, 1, 0.25}
 										var HierarchyColor = Real4{1, 1, 1, 1}
 										var SizePolicyX = UiSizePolicy.Fixed
 										var SizePolicyY = UiSizePolicy.Fixed
 										var FlexSize = Real2{1, 1}
 										var AbsoluteMinSize = Real2{1, 1}
-										var VerticalAlignment = UiVerticalAlignment.Center
+										var VerticalAlignment = UiVerticalAlignment.Top
 										var HorizontalAlignment = UiHorizontalAlignment.Left
 										var MarginLeft = 0
 										var MarginTop = 0
@@ -1261,129 +1306,128 @@ Cog
 										var MarginBottom = 0
 										var DockMode = UiDockMode.Left
 									}
-									UiTextShadow 
+									UiFillLayout 
 									{
-										var ShadowColor = Real4{0, 0, 0, 0.75}
-										var Offset = Real2{1, -1}
-										var CoverArchetype = "59b85fdaced18491:UiSpriteText"
-										var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
 									}
 									Hierarchy 
 									{
+										Cog [Id:0x5a75b8cc46e773ac]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Magic"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{72, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
 									}
 								}
-							}
-						}
-						Cog [Id:0x5a75b421227d5da0]
-						{
-							var Name = "MenuItem"
-							Transform 
-							{
-								var Translation = Real3{0, 0, 0}
-								var Scale = Real3{1, 1, 1}
-								var Rotation = Quaternion{0, 0, 0, 1}
-							}
-							Sprite 
-							{
-								var Visible = true
-								var ViewCulling = true
-								var VisibilityEvents = true
-								var OverrideBoundingBox = false
-								var LocalAabbCenter = Real3{0, 0, 0}
-								var LocalAabbHalfExtents = Real3{1, 1, 1}
-								var GroupSortValue = 0
-								var Material = "582c575af53d18c9:AlphaSprite"
-								var VertexColor = Real4{1, 1, 1, 0.25}
-								var GeometryMode = SpriteGeometryMode.ZPlane
-								var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
-								var FlipX = false
-								var FlipY = false
-								var AnimationActive = true
-								var AnimationSpeed = 1
-								var StartFrame = 0
-							}
-							Area 
-							{
-								var Size = Real2{150, 28}
-								var Origin = Location.BottomLeft
-							}
-							UiWidget 
-							{
-								var Active = true
-								var Visible = true
-								var Interactive = true
-								var InLayout = true
-								var ClipChildren = false
-								var CanTakeFocus = false
-								var LocalColor = Real4{1, 1, 1, 0.25}
-								var HierarchyColor = Real4{1, 1, 1, 1}
-								var SizePolicyX = UiSizePolicy.Fixed
-								var SizePolicyY = UiSizePolicy.Flex
-								var FlexSize = Real2{1, 1}
-								var AbsoluteMinSize = Real2{1, 1}
-								var VerticalAlignment = UiVerticalAlignment.Top
-								var HorizontalAlignment = UiHorizontalAlignment.Left
-								var MarginLeft = 0
-								var MarginTop = 0
-								var MarginRight = 0
-								var MarginBottom = 0
-								var DockMode = UiDockMode.Left
-							}
-							UiFillLayout 
-							{
-								var PaddingLeft = 8
-								var PaddingTop = 0
-								var PaddingRight = 0
-								var PaddingBottom = 0
-							}
-							MenuItem 
-							{
-								var Enabled = false
-								var TextPath = CogPath
+								Cog [Id:0x5a6f3d9c8c74e16d]
 								{
-									var Path = "UiShadowedText"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-								var MenuTitlePath = CogPath
-								{
-									var Path = "../../MenuTitle"
-									var ErrorOnResolveToNull = false
-									var ErrorOnPathCantCompute = false
-									var ErrorOnDirectLinkFail = false
-									var UpdateCogOnPathChange = true
-									var UpdatePathOnCogChange = true
-									var UpdateCogOnInitialize = true
-									var ResolvedNullErrorOccurred = false
-									var Cog = 4294967293
-									var PathPreference0 = CogPathPreference.CogRelative
-									var PathPreference1 = CogPathPreference.SpaceRelative
-									var PathPreference2 = CogPathPreference.Absolute
-								}
-							}
-							Hierarchy 
-							{
-								Cog [Id:0x5a75b8cc46e773d2]
-								{
-									var Name = "UiShadowedText"
+									var Name = "MenuItem"
 									Transform 
 									{
-										var Translation = Real3{8, -2, 0}
+										var Translation = Real3{0, 116, 0}
 										var Scale = Real3{1, 1, 1}
 										var Rotation = Quaternion{0, 0, 0, 1}
 									}
-									SpriteText 
+									Sprite 
 									{
-										var Visible = false
+										var Visible = true
 										var ViewCulling = true
 										var VisibilityEvents = true
 										var OverrideBoundingBox = false
@@ -1391,17 +1435,18 @@ Cog
 										var LocalAabbHalfExtents = Real3{1, 1, 1}
 										var GroupSortValue = 0
 										var Material = "582c575af53d18c9:AlphaSprite"
-										var VertexColor = Real4{1, 1, 1, 1}
+										var VertexColor = Real4{1, 1, 1, 0.25}
 										var GeometryMode = SpriteGeometryMode.ZPlane
-										var Text = "Save"
-										var Font = "587b2f7646ba23d5:NotoSans-Bold"
-										var FontSize = 24
-										var PixelsPerUnit = 1
-										var TextAlign = TextAlign.Left
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
 									}
 									Area 
 									{
-										var Size = Real2{56, 33}
+										var Size = Real2{200, 28}
 										var Origin = Location.BottomLeft
 									}
 									UiWidget 
@@ -1412,13 +1457,13 @@ Cog
 										var InLayout = true
 										var ClipChildren = false
 										var CanTakeFocus = false
-										var LocalColor = Real4{1, 1, 1, 1}
+										var LocalColor = Real4{1, 1, 1, 0.25}
 										var HierarchyColor = Real4{1, 1, 1, 1}
 										var SizePolicyX = UiSizePolicy.Fixed
 										var SizePolicyY = UiSizePolicy.Fixed
 										var FlexSize = Real2{1, 1}
 										var AbsoluteMinSize = Real2{1, 1}
-										var VerticalAlignment = UiVerticalAlignment.Center
+										var VerticalAlignment = UiVerticalAlignment.Top
 										var HorizontalAlignment = UiHorizontalAlignment.Left
 										var MarginLeft = 0
 										var MarginTop = 0
@@ -1426,15 +1471,444 @@ Cog
 										var MarginBottom = 0
 										var DockMode = UiDockMode.Left
 									}
-									UiTextShadow 
+									UiFillLayout 
 									{
-										var ShadowColor = Real4{0, 0, 0, 0.75}
-										var Offset = Real2{1, -1}
-										var CoverArchetype = "59b85fdaced18491:UiSpriteText"
-										var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
 									}
 									Hierarchy 
 									{
+										Cog [Id:0x5a75b8cc46e773b9]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Status"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{76, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
+									}
+								}
+								Cog [Id:0x5a75b421227d5a21]
+								{
+									var Name = "MenuItem"
+									Transform 
+									{
+										var Translation = Real3{0, 84, 0}
+										var Scale = Real3{1, 1, 1}
+										var Rotation = Quaternion{0, 0, 0, 1}
+									}
+									Sprite 
+									{
+										var Visible = true
+										var ViewCulling = true
+										var VisibilityEvents = true
+										var OverrideBoundingBox = false
+										var LocalAabbCenter = Real3{0, 0, 0}
+										var LocalAabbHalfExtents = Real3{1, 1, 1}
+										var GroupSortValue = 0
+										var Material = "582c575af53d18c9:AlphaSprite"
+										var VertexColor = Real4{1, 1, 1, 0.25}
+										var GeometryMode = SpriteGeometryMode.ZPlane
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
+									}
+									Area 
+									{
+										var Size = Real2{200, 28}
+										var Origin = Location.BottomLeft
+									}
+									UiWidget 
+									{
+										var Active = true
+										var Visible = true
+										var Interactive = true
+										var InLayout = true
+										var ClipChildren = false
+										var CanTakeFocus = false
+										var LocalColor = Real4{1, 1, 1, 0.25}
+										var HierarchyColor = Real4{1, 1, 1, 1}
+										var SizePolicyX = UiSizePolicy.Fixed
+										var SizePolicyY = UiSizePolicy.Fixed
+										var FlexSize = Real2{1, 1}
+										var AbsoluteMinSize = Real2{1, 1}
+										var VerticalAlignment = UiVerticalAlignment.Top
+										var HorizontalAlignment = UiHorizontalAlignment.Left
+										var MarginLeft = 0
+										var MarginTop = 0
+										var MarginRight = 0
+										var MarginBottom = 0
+										var DockMode = UiDockMode.Left
+									}
+									UiFillLayout 
+									{
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = true
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+									}
+									Hierarchy 
+									{
+										Cog [Id:0x5a75b8cc46e773c6]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Formation"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{126, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
+									}
+								}
+								Cog [Id:0x5a75b421227d5da0]
+								{
+									var Name = "MenuItem"
+									Transform 
+									{
+										var Translation = Real3{0, 52, 0}
+										var Scale = Real3{1, 1, 1}
+										var Rotation = Quaternion{0, 0, 0, 1}
+									}
+									Sprite 
+									{
+										var Visible = true
+										var ViewCulling = true
+										var VisibilityEvents = true
+										var OverrideBoundingBox = false
+										var LocalAabbCenter = Real3{0, 0, 0}
+										var LocalAabbHalfExtents = Real3{1, 1, 1}
+										var GroupSortValue = 0
+										var Material = "582c575af53d18c9:AlphaSprite"
+										var VertexColor = Real4{1, 1, 1, 0.25}
+										var GeometryMode = SpriteGeometryMode.ZPlane
+										var SpriteSource = "5a6f3dbab16b536e:TransparentToWhiteGradientRtoL"
+										var FlipX = false
+										var FlipY = false
+										var AnimationActive = true
+										var AnimationSpeed = 1
+										var StartFrame = 0
+									}
+									Area 
+									{
+										var Size = Real2{200, 28}
+										var Origin = Location.BottomLeft
+									}
+									UiWidget 
+									{
+										var Active = true
+										var Visible = true
+										var Interactive = true
+										var InLayout = true
+										var ClipChildren = false
+										var CanTakeFocus = false
+										var LocalColor = Real4{1, 1, 1, 0.25}
+										var HierarchyColor = Real4{1, 1, 1, 1}
+										var SizePolicyX = UiSizePolicy.Fixed
+										var SizePolicyY = UiSizePolicy.Fixed
+										var FlexSize = Real2{1, 1}
+										var AbsoluteMinSize = Real2{1, 1}
+										var VerticalAlignment = UiVerticalAlignment.Top
+										var HorizontalAlignment = UiHorizontalAlignment.Left
+										var MarginLeft = 0
+										var MarginTop = 0
+										var MarginRight = 0
+										var MarginBottom = 0
+										var DockMode = UiDockMode.Left
+									}
+									UiFillLayout 
+									{
+										var PaddingLeft = 8
+										var PaddingTop = 0
+										var PaddingRight = 0
+										var PaddingBottom = 0
+									}
+									MenuItem 
+									{
+										var Enabled = false
+										var TextPath = CogPath
+										{
+											var Path = "UiShadowedText"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+										var MenuTitlePath = CogPath
+										{
+											var Path = "../../MenuTitle"
+											var ErrorOnResolveToNull = false
+											var ErrorOnPathCantCompute = false
+											var ErrorOnDirectLinkFail = false
+											var UpdateCogOnPathChange = true
+											var UpdatePathOnCogChange = true
+											var UpdateCogOnInitialize = true
+											var ResolvedNullErrorOccurred = false
+											var Cog = 4294967293
+											var PathPreference0 = CogPathPreference.CogRelative
+											var PathPreference1 = CogPathPreference.SpaceRelative
+											var PathPreference2 = CogPathPreference.Absolute
+										}
+									}
+									Hierarchy 
+									{
+										Cog [Id:0x5a75b8cc46e773d2]
+										{
+											var Name = "UiShadowedText"
+											Transform 
+											{
+												var Translation = Real3{8, -2, 0}
+												var Scale = Real3{1, 1, 1}
+												var Rotation = Quaternion{0, 0, 0, 1}
+											}
+											SpriteText 
+											{
+												var Visible = false
+												var ViewCulling = true
+												var VisibilityEvents = true
+												var OverrideBoundingBox = false
+												var LocalAabbCenter = Real3{0, 0, 0}
+												var LocalAabbHalfExtents = Real3{1, 1, 1}
+												var GroupSortValue = 0
+												var Material = "582c575af53d18c9:AlphaSprite"
+												var VertexColor = Real4{1, 1, 1, 1}
+												var GeometryMode = SpriteGeometryMode.ZPlane
+												var Text = "Save"
+												var Font = "587b2f7646ba23d5:NotoSans-Bold"
+												var FontSize = 24
+												var PixelsPerUnit = 1
+												var TextAlign = TextAlign.Left
+											}
+											Area 
+											{
+												var Size = Real2{56, 33}
+												var Origin = Location.BottomLeft
+											}
+											UiWidget 
+											{
+												var Active = true
+												var Visible = true
+												var Interactive = true
+												var InLayout = true
+												var ClipChildren = false
+												var CanTakeFocus = false
+												var LocalColor = Real4{1, 1, 1, 1}
+												var HierarchyColor = Real4{1, 1, 1, 1}
+												var SizePolicyX = UiSizePolicy.Fixed
+												var SizePolicyY = UiSizePolicy.Fixed
+												var FlexSize = Real2{1, 1}
+												var AbsoluteMinSize = Real2{1, 1}
+												var VerticalAlignment = UiVerticalAlignment.Center
+												var HorizontalAlignment = UiHorizontalAlignment.Left
+												var MarginLeft = 0
+												var MarginTop = 0
+												var MarginRight = 0
+												var MarginBottom = 0
+												var DockMode = UiDockMode.Left
+											}
+											UiTextShadow 
+											{
+												var ShadowColor = Real4{0, 0, 0, 0.75}
+												var Offset = Real2{1, -1}
+												var CoverArchetype = "59b85fdaced18491:UiSpriteText"
+												var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+											}
+											Hierarchy 
+											{
+											}
+										}
 									}
 								}
 							}

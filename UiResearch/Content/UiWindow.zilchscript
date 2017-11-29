@@ -27,7 +27,6 @@ class UiWindow : ZilchComponent
   function Initialize(init : CogInitializer)
   {
     this.TargetSize = this.UiWidget.Size;
-    this.UiWidget.Size = Real2.Zero;
     
     Zero.Connect(this.Owner, Events.UiWindowSetup, this.OnUiWindowSetup);
     Zero.Connect(this.Owner, Events.UiWindowDestroyed, this.OnUiWindowDestroyed);
@@ -36,6 +35,8 @@ class UiWindow : ZilchComponent
   
   function OnUiWindowSetup(event : UiWindowEvent)
   {
+    this.UiWidget.Size = Real2.Zero;
+    
     var worldTopLeft = event.WorldTopLeft;
     
     var rootSize = this.UiWidget.RootWidget.Owner.UiWidget.Size;

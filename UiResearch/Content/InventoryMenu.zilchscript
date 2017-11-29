@@ -1,0 +1,37 @@
+class InventoryMenu : ZilchComponent
+{
+  [Dependency]
+  var UiWidget : UiWidget;
+  [Dependency]
+  var Inventory : Inventory;
+  
+  
+  [Property]
+  var ItemsPath = CogPath();
+  [Property]
+  var MenuItemArchetype : Archetype;
+  
+  
+  function Initialize(init : CogInitializer)
+  {
+    this.CreateMenuItems();
+  }
+  
+  
+  function CreateMenuItems()
+  {
+    var items = this.Inventory.Items;
+    
+    foreach (var item in items)
+    {
+      var menuItem = this.Space.Create(this.MenuItemArchetype);
+      menuItem.AttachToPreserveLocal(this.ItemsPath.Cog);
+      
+      var ule = UiListEvent();
+      ule.Name     = item.Name;
+      ule.Quantity = item.Quantity;
+      ule.Type     = item.Type;
+      menuItem.DispatchEvent(Events.InventoryItemSetup, ule);
+    }
+  }
+}
