@@ -1,5 +1,9 @@
 class MenuItem : ZilchComponent
 {
+  sends UiDisable : MenuEvent;
+  sends UiEnable : MenuEvent;
+  
+  
   [Dependency]
   var UiWidget : UiWidget;
   [Dependency]
@@ -10,13 +14,9 @@ class MenuItem : ZilchComponent
   var Enabled = true;
   [Property]
   var TextPath = CogPath("UiShadowedText");
-  [Property]
-  var MenuTitlePath : CogPath;
   
   var DefaultColor : Real4 = Real4(1.0.XXX, 0.25);
   var HoverColor : Real4 = Color.FromHsva(50/360.0, 0.9, 0.9, 0.75);
-  var DefaultTextColor : Real4 = Colors.White;
-  var DisabledTextColor : Real4 = Real4(0.6, 0.6, 0.6, 1);
   
   var DefaultPadding : Real = 8;
   var HoverPadding : Real = 16;
@@ -43,11 +43,6 @@ class MenuItem : ZilchComponent
   
   function OnAllObjectsInitialized(event : CogInitializerEvent)
   {
-    if (this.TextPath.UiTextShadow == null)
-      this.TextPath.UiWidget.LocalColor = this.DefaultTextColor;
-    else
-      this.TextPath.UiTextShadow.TextColor = this.DefaultTextColor;
-    
     if (this.Enabled)
       this.Enable();
     else
@@ -164,12 +159,9 @@ class MenuItem : ZilchComponent
   
   function Enable()
   {
+    //Print("Enabling 
     this.Enabled = true;
-    
-    if (this.TextPath.Cog.UiTextShadow == null)
-      this.TextPath.UiWidget.LocalColor = this.DefaultTextColor;
-    else
-      this.TextPath.Cog.UiTextShadow.TextColor = this.DefaultTextColor;
+    this.Owner.DispatchDown(Events.UiEnable, MenuEvent());
     
     Zero.Connect(this.Owner, Events.MouseEnterHierarchy, this.OnMouseEnterHierarchy);
     Zero.Connect(this.Owner, Events.MouseExitHierarchy, this.OnMouseExitHierarchy);
@@ -180,11 +172,7 @@ class MenuItem : ZilchComponent
   function Disable()
   {
     this.Enabled = false;
-    
-    if (this.TextPath.Cog.UiTextShadow == null)
-      this.TextPath.UiWidget.LocalColor = this.DisabledTextColor;
-    else
-      this.TextPath.Cog.UiTextShadow.TextColor = this.DisabledTextColor;
+    this.Owner.DispatchDown(Events.UiDisable, MenuEvent());
     
     Zero.Disconnect(this.Owner, Events.MouseEnterHierarchy, this);
     Zero.Disconnect(this.Owner, Events.MouseExitHierarchy, this);

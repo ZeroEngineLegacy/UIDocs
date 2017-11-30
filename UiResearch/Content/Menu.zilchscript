@@ -1,8 +1,5 @@
 class Menu : ZilchComponent
 {
-  sends MenuOpened : MenuEvent;
-  
-  
   [Dependency]
   var UiWidget : UiWidget;
   [Dependency]
@@ -51,5 +48,8 @@ class Menu : ZilchComponent
 
 class MenuEvent : ZilchEvent
 {
-  
+  var ToMenu : Cog;
+  var Name : String;
+  var Quantity : Integer;
+  var Type : ItemType;
 }

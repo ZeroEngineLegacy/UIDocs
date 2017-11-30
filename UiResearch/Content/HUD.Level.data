@@ -48,9 +48,9 @@ Level
 		var Name = "EditorCamera"
 		Transform 
 		{
-			var Translation = Real3{293, 155, 10}
+			var Translation = Real3{293, 155, 19.9999962}
 			var Scale = Real3{1, 1, 1}
-			var Rotation = Quaternion{0, 0, 0, 1}
+			var Rotation = Quaternion{0, -1.09278471e-08, 0, 1}
 		}
 		CameraViewport 
 		{
@@ -101,7 +101,7 @@ Level
 			var FarPlane = 100
 			var PerspectiveMode = PerspectiveMode.Orthographic
 			var FieldOfView = 45
-			var Size = 786
+			var Size = 566
 		}
 		EditorCameraController 
 		{
@@ -505,6 +505,9 @@ Level
 							var PaddingRight = 0
 							var PaddingBottom = 0
 						}
+						MenuSwitcher 
+						{
+						}
 						Hierarchy 
 						{
 							Cog [Id:0x5a7dcea1ac24d71c][ContextId:9]
@@ -868,21 +871,6 @@ Level
 												var UpdateCogOnInitialize = true
 												var ResolvedNullErrorOccurred = false
 												var Cog = 14
-												var PathPreference0 = CogPathPreference.CogRelative
-												var PathPreference1 = CogPathPreference.SpaceRelative
-												var PathPreference2 = CogPathPreference.Absolute
-											}
-											var MenuTitlePath = CogPath
-											{
-												var Path = "../../MenuTitle"
-												var ErrorOnResolveToNull = false
-												var ErrorOnPathCantCompute = false
-												var ErrorOnDirectLinkFail = false
-												var UpdateCogOnPathChange = true
-												var UpdatePathOnCogChange = true
-												var UpdateCogOnInitialize = true
-												var ResolvedNullErrorOccurred = false
-												var Cog = 4294967293
 												var PathPreference0 = CogPathPreference.CogRelative
 												var PathPreference1 = CogPathPreference.SpaceRelative
 												var PathPreference2 = CogPathPreference.Absolute
@@ -1297,21 +1285,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -1375,6 +1348,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{
@@ -1462,21 +1438,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -1540,6 +1501,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{
@@ -1627,21 +1591,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -1705,6 +1654,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{
@@ -1792,21 +1744,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -1870,6 +1807,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{
@@ -1957,21 +1897,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -2035,6 +1960,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{
@@ -2122,21 +2050,6 @@ Level
 														var PathPreference1 = CogPathPreference.SpaceRelative
 														var PathPreference2 = CogPathPreference.Absolute
 													}
-													var MenuTitlePath = CogPath
-													{
-														var Path = "../../MenuTitle"
-														var ErrorOnResolveToNull = false
-														var ErrorOnPathCantCompute = false
-														var ErrorOnDirectLinkFail = false
-														var UpdateCogOnPathChange = true
-														var UpdatePathOnCogChange = true
-														var UpdateCogOnInitialize = true
-														var ResolvedNullErrorOccurred = false
-														var Cog = 16
-														var PathPreference0 = CogPathPreference.CogRelative
-														var PathPreference1 = CogPathPreference.SpaceRelative
-														var PathPreference2 = CogPathPreference.Absolute
-													}
 												}
 												Hierarchy 
 												{
@@ -2200,6 +2113,9 @@ Level
 															var Offset = Real2{1, -1}
 															var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 															var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
+														}
+														UiTextDisabler 
+														{
 														}
 														Hierarchy 
 														{

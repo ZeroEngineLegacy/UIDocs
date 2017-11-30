@@ -27,11 +27,11 @@ class InventoryMenu : ZilchComponent
       var menuItem = this.Space.Create(this.MenuItemArchetype);
       menuItem.AttachToPreserveLocal(this.ItemsPath.Cog);
       
-      var ule = UiListEvent();
-      ule.Name     = item.Name;
-      ule.Quantity = item.Quantity;
-      ule.Type     = item.Type;
-      menuItem.DispatchEvent(Events.InventoryItemSetup, ule);
+      var me = MenuEvent();
+      me.Name     = item.Name;
+      me.Quantity = item.Quantity;
+      me.Type     = item.Type;
+      menuItem.DispatchEvent(Events.InventoryItemSetup, me);
     }
   }
 }

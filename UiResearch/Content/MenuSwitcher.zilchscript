@@ -1,0 +1,24 @@
+class MenuSwitcher : ZilchComponent
+{
+  sends MenuOpened : MenuEvent;
+  sends RequestMenuSwitch : MenuEvent;
+  
+  
+  [Dependency]
+  var UiWidget : UiWidget;
+  
+  
+  var CurrentMenu : Cog;
+  
+  
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Owner, Events.RequestMenuSwitch, this.OnRequestMenuSwitch);
+  }
+  
+  
+  function OnRequestMenuSwitch(event : MenuEvent)
+  {
+    
+  }
+}
