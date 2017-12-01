@@ -48,6 +48,7 @@ class Menu : ZilchComponent
 
 class MenuEvent : ZilchEvent
 {
+  var FromMenu : Cog;
   var ToMenu : Cog;
   var Name : String;
   var Quantity : Integer;

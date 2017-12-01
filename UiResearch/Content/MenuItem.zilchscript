@@ -24,6 +24,9 @@ class MenuItem : ZilchComponent
   var Actions : ActionSet;
   var Blinking = false;
   var Shrinking = false;
+  var MouseIsOver = false;
+  
+  var Clone : Cog;
   
   var CanAnimate : Boolean { get { return !this.Blinking && !this.Shrinking; }}
   
@@ -52,8 +55,32 @@ class MenuItem : ZilchComponent
   
   function OnMouseEnterHierarchy(event : ViewportMouseEvent)
   {
+    this.MouseIsOver = true;
+    
+    if (this.CanAnimate)
+      this.Highlight();
+  }
+  
+  
+  function OnMouseExitHierarchy(event : ViewportMouseEvent)
+  {
+    this.MouseIsOver = false;
+    
+    if (this.CanAnimate)
+      this.Unhighlight();
+  }
+  
+  
+  function OnLeftClick(event : ViewportMouseEvent)
+  {
     if (!this.CanAnimate) return;
     
+    this.Activate();
+  }
+  
+  
+  function Highlight()
+  {
     var colorProperty = @this.UiWidget.LocalColor;
     var colorEndValue = this.HoverColor;
     var paddingProperty = @this.Layout.PaddingLeft;
@@ -69,10 +96,8 @@ class MenuItem : ZilchComponent
   }
   
   
-  function OnMouseExitHierarchy(event : ViewportMouseEvent)
+  function Unhighlight()
   {
-    if (!this.CanAnimate) return;
-    
     var colorProperty = @this.UiWidget.LocalColor;
     var colorEndValue = this.DefaultColor;
     var paddingProperty = @this.Layout.PaddingLeft;
@@ -85,14 +110,6 @@ class MenuItem : ZilchComponent
       
       Action.Property(this.Actions, colorProperty, colorEndValue, duration, ease);
       Action.Property(this.Actions, paddingProperty, paddingEndValue, duration, ease);
-  }
-  
-  
-  function OnLeftClick(event : ViewportMouseEvent)
-  {
-    if (!this.CanAnimate) return;
-    
-    this.Activate();
   }
   
   
@@ -117,21 +134,39 @@ class MenuItem : ZilchComponent
         }
         
         Action.Property(seq, @this.Blinking, false, 0, Ease.Linear);
-        Action.Call(seq, this.CreateClone);
+        Action.Call(seq, this.DispatchActivateEvent);
+        Action.Call(seq, this.ColorSafety);
+        //Action.Call(seq, this.CreateClone);
         //Action.Call(seq, this.ShrinkInLayout);
-        Action.Property(seq, @this.UiWidget.Visible, false, 0, Ease.Linear);
+        //Action.Property(seq, @this.UiWidget.Visible, false, 0, Ease.Linear);
+  }
+  
+  
+  function DispatchActivateEvent()
+  {
+    this.Owner.DispatchEvent(Events.UiActivated, MenuEvent());
+  }
+  
+  
+  function ColorSafety()
+  {
+    if (!this.MouseIsOver)
+      this.Unhighlight();
   }
   
   
   function CreateClone()
   {
-    var clone = this.Space.Create(Archetype.MenuItemClone);
-    clone.AttachToPreserveLocal(this.Owner.Parent);
+    if (this.Clone != null)
+      this.Clone.Destroy();
+    
+    this.Clone = this.Space.Create(Archetype.MenuItemClone);
+    this.Clone.AttachToPreserveLocal(this.Owner.Parent);
     
     var mie = MenuItemEvent();
     mie.MenuItemCog = this.Owner;
     mie.TextCog = this.TextPath.Cog;
-    clone.DispatchEvent(Events.MenuItemCloneSetup, mie);
+    this.Clone.DispatchEvent(Events.MenuItemCloneSetup, mie);
   }
   
   

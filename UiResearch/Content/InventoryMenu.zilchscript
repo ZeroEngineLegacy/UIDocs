@@ -2,35 +2,54 @@ class InventoryMenu : ZilchComponent
 {
   [Dependency]
   var UiWidget : UiWidget;
-  [Dependency]
-  var Inventory : Inventory;
   
   
   [Property]
-  var ItemsPath = CogPath();
+  var MenuItemsPath = CogPath();
   [Property]
   var MenuItemArchetype : Archetype;
+  [Property]
+  var InventoryPath = CogPath();
   
   
   function Initialize(init : CogInitializer)
   {
-    this.CreateMenuItems();
+    //this.CreateMenuItemsFromList();
+    this.CreateMenuItemsFromChildren();
   }
   
   
-  function CreateMenuItems()
+  function CreateMenuItemsFromList()
   {
-    var items = this.Inventory.Items;
+    var items = this.InventoryPath.Inventory.Items;
     
     foreach (var item in items)
     {
       var menuItem = this.Space.Create(this.MenuItemArchetype);
-      menuItem.AttachToPreserveLocal(this.ItemsPath.Cog);
+      menuItem.AttachToPreserveLocal(this.MenuItemsPath.Cog);
       
       var me = MenuEvent();
       me.Name     = item.Name;
       me.Quantity = item.Quantity;
       me.Type     = item.Type;
+      menuItem.DispatchEvent(Events.InventoryItemSetup, me);
+    }
+  }
+  
+  
+  function CreateMenuItemsFromChildren()
+  {
+    var children = this.InventoryPath.Cog.Children;
+    
+    foreach (var child in children)
+    {
+      var menuItem = this.Space.Create(this.MenuItemArchetype);
+      menuItem.AttachToPreserveLocal(this.MenuItemsPath.Cog);
+      
+      var me = MenuEvent();
+      me.Name     = child.InventoryItemInterface.Name;
+      me.Quantity = child.InventoryItemInterface.Quantity;
+      me.Type     = child.InventoryItemInterface.Type;
       menuItem.DispatchEvent(Events.InventoryItemSetup, me);
     }
   }

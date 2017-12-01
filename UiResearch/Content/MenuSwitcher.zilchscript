@@ -19,6 +19,9 @@ class MenuSwitcher : ZilchComponent
   
   function OnRequestMenuSwitch(event : MenuEvent)
   {
-    
+    event.FromMenu.UiWidget.Active = false;
+    event.ToMenu.UiWidget.Active = true;
+    this.CurrentMenu = event.ToMenu;
+    this.CurrentMenu.DispatchEvent(Events.MenuOpened, MenuEvent());
   }
 }
