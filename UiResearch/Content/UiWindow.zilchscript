@@ -39,7 +39,7 @@ class UiWindow : ZilchComponent
     
     var worldTopLeft = event.WorldTopLeft;
     
-    var rootSize = this.UiWidget.RootWidget.Owner.UiWidget.Size;
+    var rootSize = this.UiWidget.Root.Owner.UiWidget.Size;
     var thisSize = this.TargetSize;
     
     var overhangX = worldTopLeft.X + thisSize.X - rootSize.X;

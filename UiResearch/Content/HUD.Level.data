@@ -48,7 +48,7 @@ Level
 		var Name = "EditorCamera"
 		Transform 
 		{
-			var Translation = Real3{293, 155, 19.9999962}
+			var Translation = Real3{271, -183, 19.9999943}
 			var Scale = Real3{1, 1, 1}
 			var Rotation = Quaternion{0, -1.09278471e-08, 0, 1}
 		}
@@ -101,7 +101,7 @@ Level
 			var FarPlane = 100
 			var PerspectiveMode = PerspectiveMode.Orthographic
 			var FieldOfView = 45
-			var Size = 786
+			var Size = 869
 		}
 		EditorCameraController 
 		{
@@ -110,7 +110,7 @@ Level
 			var LookDistance = 20
 			var VerticalAngle = 0
 			var HorizontalAngle = 0
-			var LookTarget = Real3{293, 155, -3.59614023e-06}
+			var LookTarget = Real3{271, -183, -6.42557279e-06}
 			var MoveSensitivity = 1
 		}
 	}
@@ -200,7 +200,7 @@ Level
 		Area 
 		{
 			var Size = Real2{576, 324}
-			var Origin = Location.BottomLeft
+			var Origin = Location.TopLeft
 		}
 		Sprite 
 		{
@@ -225,7 +225,7 @@ Level
 		{
 			var Active = true
 		}
-		UiWidget 
+		UiRootWidget 
 		{
 			var Active = true
 			var Visible = true
@@ -246,9 +246,6 @@ Level
 			var MarginRight = 0
 			var MarginBottom = 0
 			var DockMode = UiDockMode.Left
-		}
-		UiRootWidget 
-		{
 			var MouseHoverTime = 0.100000001
 			var MouseHoldTime = 1
 			var DoubleClickTime = 0.300000012
@@ -275,7 +272,7 @@ Level
 				var Name = "MenuWindow"
 				Transform 
 				{
-					var Translation = Real3{8, 8, 0}
+					var Translation = Real3{8, -8, 0}
 					var Scale = Real3{1, 1, 1}
 					var Rotation = Quaternion{0, 0, 0, 1}
 				}
@@ -301,7 +298,7 @@ Level
 				Area 
 				{
 					var Size = Real2{560, 308}
-					var Origin = Location.BottomLeft
+					var Origin = Location.TopLeft
 				}
 				UiWidget 
 				{
@@ -342,7 +339,7 @@ Level
 						var Name = "BackgroundFill"
 						Transform 
 						{
-							var Translation = Real3{8, 8, 0}
+							var Translation = Real3{8, -8, 0}
 							var Scale = Real3{1, 1, 1}
 							var Rotation = Quaternion{0, 0, 0, 1}
 						}
@@ -368,7 +365,7 @@ Level
 						Area 
 						{
 							var Size = Real2{544, 292}
-							var Origin = Location.BottomLeft
+							var Origin = Location.TopLeft
 						}
 						UiWidget 
 						{
@@ -432,7 +429,7 @@ Level
 								Area 
 								{
 									var Size = Real2{544, 292}
-									var Origin = Location.BottomLeft
+									var Origin = Location.TopLeft
 								}
 								UiWidget 
 								{
@@ -467,14 +464,14 @@ Level
 						var Name = "Menus"
 						Transform 
 						{
-							var Translation = Real3{8, 8, 0}
+							var Translation = Real3{8, -8, 0}
 							var Scale = Real3{1, 1, 1}
 							var Rotation = Quaternion{0, 0, 0, 1}
 						}
 						Area 
 						{
 							var Size = Real2{544, 292}
-							var Origin = Location.BottomLeft
+							var Origin = Location.TopLeft
 						}
 						UiWidget 
 						{
@@ -522,7 +519,7 @@ Level
 								Area 
 								{
 									var Size = Real2{544, 292}
-									var Origin = Location.BottomLeft
+									var Origin = Location.TopLeft
 								}
 								UiWidget 
 								{
@@ -635,7 +632,7 @@ Level
 										var Name = "MenuTitle"
 										Transform 
 										{
-											var Translation = Real3{4, 248, 0}
+											var Translation = Real3{4, -4, 0}
 											var Scale = Real3{1, 1, 1}
 											var Rotation = Quaternion{0, 0, 0, 1}
 										}
@@ -661,7 +658,7 @@ Level
 										Area 
 										{
 											var Size = Real2{536, 40}
-											var Origin = Location.BottomLeft
+											var Origin = Location.TopLeft
 										}
 										UiWidget 
 										{
@@ -699,7 +696,7 @@ Level
 												var Name = "UiShadowedText"
 												Transform 
 												{
-													var Translation = Real3{8, 1, 0}
+													var Translation = Real3{8, -1, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -724,7 +721,7 @@ Level
 												Area 
 												{
 													var Size = Real2{162, 38}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -766,7 +763,7 @@ Level
 										var Name = "MenuItems"
 										Transform 
 										{
-											var Translation = Real3{4, 36, 0}
+											var Translation = Real3{4, -48, 0}
 											var Scale = Real3{1, 1, 1}
 											var Rotation = Quaternion{0, 0, 0, 1}
 										}
@@ -792,7 +789,7 @@ Level
 										Area 
 										{
 											var Size = Real2{536, 208}
-											var Origin = Location.BottomLeft
+											var Origin = Location.TopLeft
 										}
 										UiWidget 
 										{
@@ -831,10 +828,10 @@ Level
 									}
 									Cog [Id:0x5a7e0844726bf72a][ContextId:14]
 									{
-										var Name = "MenuItem"
+										var Name = "BackButton"
 										Transform 
 										{
-											var Translation = Real3{4, 4, 0}
+											var Translation = Real3{4, -260, 0}
 											var Scale = Real3{1, 1, 1}
 											var Rotation = Quaternion{0, 0, 0, 1}
 										}
@@ -860,7 +857,7 @@ Level
 										Area 
 										{
 											var Size = Real2{200, 28}
-											var Origin = Location.BottomLeft
+											var Origin = Location.TopLeft
 										}
 										UiWidget 
 										{
@@ -943,6 +940,10 @@ Level
 												var PathPreference2 = CogPathPreference.Absolute
 											}
 										}
+										UiChangeCursor 
+										{
+											var Cursor = Cursor.Hand
+										}
 										Hierarchy 
 										{
 											Cog [Id:0x5a75b82777843542][ContextId:15]
@@ -950,7 +951,7 @@ Level
 												var Name = "UiShadowedText"
 												Transform 
 												{
-													var Translation = Real3{8, -2, 0}
+													var Translation = Real3{8, 3, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -975,7 +976,7 @@ Level
 												Area 
 												{
 													var Size = Real2{119, 33}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1026,7 +1027,7 @@ Level
 								Area 
 								{
 									var Size = Real2{544, 292}
-									var Origin = Location.BottomLeft
+									var Origin = Location.TopLeft
 								}
 								UiWidget 
 								{
@@ -1099,7 +1100,7 @@ Level
 										var Name = "MenuTitle"
 										Transform 
 										{
-											var Translation = Real3{4, 248, 0}
+											var Translation = Real3{4, -4, 0}
 											var Scale = Real3{1, 1, 1}
 											var Rotation = Quaternion{0, 0, 0, 1}
 										}
@@ -1125,7 +1126,7 @@ Level
 										Area 
 										{
 											var Size = Real2{536, 40}
-											var Origin = Location.BottomLeft
+											var Origin = Location.TopLeft
 										}
 										UiWidget 
 										{
@@ -1163,7 +1164,7 @@ Level
 												var Name = "UiShadowedText"
 												Transform 
 												{
-													var Translation = Real3{8, 1, 0}
+													var Translation = Real3{8, -1, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1188,7 +1189,7 @@ Level
 												Area 
 												{
 													var Size = Real2{162, 38}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1230,14 +1231,14 @@ Level
 										var Name = "MenuItems"
 										Transform 
 										{
-											var Translation = Real3{4, 4, 0}
+											var Translation = Real3{4, -48, 0}
 											var Scale = Real3{1, 1, 1}
 											var Rotation = Quaternion{0, 0, 0, 1}
 										}
 										Area 
 										{
 											var Size = Real2{536, 240}
-											var Origin = Location.BottomLeft
+											var Origin = Location.TopLeft
 										}
 										UiWidget 
 										{
@@ -1277,7 +1278,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 212, 0}
+													var Translation = Real3{0, 0, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1303,7 +1304,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1386,6 +1387,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b82777843542][ContextId:21]
@@ -1393,7 +1398,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -1418,7 +1423,7 @@ Level
 														Area 
 														{
 															var Size = Real2{119, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{
@@ -1463,7 +1468,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 180, 0}
+													var Translation = Real3{0, -32, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1489,7 +1494,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1539,6 +1544,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b8cc46e7739e][ContextId:23]
@@ -1546,7 +1555,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -1571,7 +1580,7 @@ Level
 														Area 
 														{
 															var Size = Real2{130, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{
@@ -1616,7 +1625,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 148, 0}
+													var Translation = Real3{0, -64, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1642,7 +1651,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1692,6 +1701,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b8cc46e773ac][ContextId:25]
@@ -1699,7 +1712,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -1724,7 +1737,7 @@ Level
 														Area 
 														{
 															var Size = Real2{72, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{
@@ -1769,7 +1782,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 116, 0}
+													var Translation = Real3{0, -96, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1795,7 +1808,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1845,6 +1858,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b8cc46e773b9][ContextId:27]
@@ -1852,7 +1869,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -1877,7 +1894,7 @@ Level
 														Area 
 														{
 															var Size = Real2{76, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{
@@ -1922,7 +1939,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 84, 0}
+													var Translation = Real3{0, -128, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -1948,7 +1965,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -1998,6 +2015,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b8cc46e773c6][ContextId:29]
@@ -2005,7 +2026,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -2030,7 +2051,7 @@ Level
 														Area 
 														{
 															var Size = Real2{126, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{
@@ -2075,7 +2096,7 @@ Level
 												var Name = "MenuItem"
 												Transform 
 												{
-													var Translation = Real3{0, 52, 0}
+													var Translation = Real3{0, -160, 0}
 													var Scale = Real3{1, 1, 1}
 													var Rotation = Quaternion{0, 0, 0, 1}
 												}
@@ -2101,7 +2122,7 @@ Level
 												Area 
 												{
 													var Size = Real2{200, 28}
-													var Origin = Location.BottomLeft
+													var Origin = Location.TopLeft
 												}
 												UiWidget 
 												{
@@ -2151,6 +2172,10 @@ Level
 														var PathPreference2 = CogPathPreference.Absolute
 													}
 												}
+												UiChangeCursor 
+												{
+													var Cursor = Cursor.Hand
+												}
 												Hierarchy 
 												{
 													Cog [Id:0x5a75b8cc46e773d2][ContextId:31]
@@ -2158,7 +2183,7 @@ Level
 														var Name = "UiShadowedText"
 														Transform 
 														{
-															var Translation = Real3{8, -2, 0}
+															var Translation = Real3{8, 3, 0}
 															var Scale = Real3{1, 1, 1}
 															var Rotation = Quaternion{0, 0, 0, 1}
 														}
@@ -2183,7 +2208,7 @@ Level
 														Area 
 														{
 															var Size = Real2{56, 33}
-															var Origin = Location.BottomLeft
+															var Origin = Location.TopLeft
 														}
 														UiWidget 
 														{

@@ -4,7 +4,7 @@ Cog
 	var Name = "InventoryMenuItem"
 	Transform 
 	{
-		var Translation = Real3{0, 0, 0}
+		var Translation = Real3{446.706696, 78.2190857, -1.04904175e-05}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
@@ -30,7 +30,7 @@ Cog
 	Area 
 	{
 		var Size = Real2{536, 20}
-		var Origin = Location.BottomLeft
+		var Origin = Location.TopLeft
 	}
 	UiWidget 
 	{
@@ -143,7 +143,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{248, 22}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{
@@ -211,7 +211,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{62, 22}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{
@@ -276,7 +276,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{186, 22}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{

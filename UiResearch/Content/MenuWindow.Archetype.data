@@ -4,7 +4,7 @@ Cog
 	var Name = "MenuWindow"
 	Transform 
 	{
-		var Translation = Real3{8, 8, 0}
+		var Translation = Real3{751.646606, 103.51944, -4.76837158e-06}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
@@ -30,7 +30,7 @@ Cog
 	Area 
 	{
 		var Size = Real2{560, 308}
-		var Origin = Location.BottomLeft
+		var Origin = Location.TopLeft
 	}
 	UiWidget 
 	{
@@ -97,7 +97,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{544, 292}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{
@@ -161,7 +161,7 @@ Cog
 					Area 
 					{
 						var Size = Real2{544, 292}
-						var Origin = Location.BottomLeft
+						var Origin = Location.TopLeft
 					}
 					UiWidget 
 					{
@@ -203,7 +203,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{544, 292}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{
@@ -248,7 +248,7 @@ Cog
 					Area 
 					{
 						var Size = Real2{544, 292}
-						var Origin = Location.BottomLeft
+						var Origin = Location.TopLeft
 					}
 					UiWidget 
 					{
@@ -347,7 +347,7 @@ Cog
 							Area 
 							{
 								var Size = Real2{536, 40}
-								var Origin = Location.BottomLeft
+								var Origin = Location.TopLeft
 							}
 							UiWidget 
 							{
@@ -410,7 +410,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{162, 38}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -459,7 +459,7 @@ Cog
 							Area 
 							{
 								var Size = Real2{536, 240}
-								var Origin = Location.BottomLeft
+								var Origin = Location.TopLeft
 							}
 							UiWidget 
 							{
@@ -525,7 +525,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -574,21 +574,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -622,7 +607,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{119, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -675,7 +660,7 @@ Cog
 					Area 
 					{
 						var Size = Real2{544, 292}
-						var Origin = Location.BottomLeft
+						var Origin = Location.TopLeft
 					}
 					UiWidget 
 					{
@@ -774,7 +759,7 @@ Cog
 							Area 
 							{
 								var Size = Real2{536, 40}
-								var Origin = Location.BottomLeft
+								var Origin = Location.TopLeft
 							}
 							UiWidget 
 							{
@@ -837,7 +822,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{162, 38}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -886,7 +871,7 @@ Cog
 							Area 
 							{
 								var Size = Real2{536, 240}
-								var Origin = Location.BottomLeft
+								var Origin = Location.TopLeft
 							}
 							UiWidget 
 							{
@@ -952,7 +937,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1001,21 +986,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1049,7 +1019,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{119, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -1117,7 +1087,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1166,21 +1136,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1214,7 +1169,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{130, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -1282,7 +1237,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1331,21 +1286,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1379,7 +1319,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{72, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -1447,7 +1387,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1496,21 +1436,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1544,7 +1469,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{76, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -1612,7 +1537,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1661,21 +1586,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1709,7 +1619,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{126, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{
@@ -1777,7 +1687,7 @@ Cog
 									Area 
 									{
 										var Size = Real2{200, 28}
-										var Origin = Location.BottomLeft
+										var Origin = Location.TopLeft
 									}
 									UiWidget 
 									{
@@ -1826,21 +1736,6 @@ Cog
 											var PathPreference1 = CogPathPreference.SpaceRelative
 											var PathPreference2 = CogPathPreference.Absolute
 										}
-										var MenuTitlePath = CogPath
-										{
-											var Path = "../../MenuTitle"
-											var ErrorOnResolveToNull = false
-											var ErrorOnPathCantCompute = false
-											var ErrorOnDirectLinkFail = false
-											var UpdateCogOnPathChange = true
-											var UpdatePathOnCogChange = true
-											var UpdateCogOnInitialize = true
-											var ResolvedNullErrorOccurred = false
-											var Cog = 4294967293
-											var PathPreference0 = CogPathPreference.CogRelative
-											var PathPreference1 = CogPathPreference.SpaceRelative
-											var PathPreference2 = CogPathPreference.Absolute
-										}
 									}
 									Hierarchy 
 									{
@@ -1874,7 +1769,7 @@ Cog
 											Area 
 											{
 												var Size = Real2{56, 33}
-												var Origin = Location.BottomLeft
+												var Origin = Location.TopLeft
 											}
 											UiWidget 
 											{

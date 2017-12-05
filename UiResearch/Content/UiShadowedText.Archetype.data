@@ -4,7 +4,7 @@ Cog
 	var Name = "UiShadowedText"
 	Transform 
 	{
-		var Translation = Real3{8, 8, 0}
+		var Translation = Real3{0, 0, 3.81469727e-06}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
@@ -29,7 +29,7 @@ Cog
 	Area 
 	{
 		var Size = Real2{500, 33}
-		var Origin = Location.BottomLeft
+		var Origin = Location.TopLeft
 	}
 	UiWidget 
 	{
@@ -55,8 +55,8 @@ Cog
 	}
 	UiTextShadow 
 	{
-		var Offset = Real2{1, -1}
 		var ShadowColor = Real4{0, 0, 0, 0.75}
+		var Offset = Real2{1, -1}
 		var CoverArchetype = "59b85fdaced18491:UiSpriteText"
 		var ShadowArchetype = "59b85fdaced18491:UiSpriteText"
 	}

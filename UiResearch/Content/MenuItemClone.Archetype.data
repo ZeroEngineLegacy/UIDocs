@@ -4,7 +4,7 @@ Cog
 	var Name = "MenuItemClone"
 	Transform 
 	{
-		var Translation = Real3{0, 116, 0}
+		var Translation = Real3{796.381592, 184.042404, -4.76837158e-06}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
@@ -30,7 +30,7 @@ Cog
 	Area 
 	{
 		var Size = Real2{150, 24}
-		var Origin = Location.BottomLeft
+		var Origin = Location.TopLeft
 	}
 	UiWidget 
 	{
@@ -111,7 +111,7 @@ Cog
 			Area 
 			{
 				var Size = Real2{143, 33}
-				var Origin = Location.BottomLeft
+				var Origin = Location.TopLeft
 			}
 			UiWidget 
 			{
