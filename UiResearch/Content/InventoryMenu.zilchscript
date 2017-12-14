@@ -16,6 +16,8 @@ class InventoryMenu : ZilchComponent
   {
     //this.CreateMenuItemsFromList();
     this.CreateMenuItemsFromChildren();
+    //this.MenuItemsPath.UiWidget.
+    //this.MenuItemsPath.UiWidget.SizeToContents();
   }
   
   
