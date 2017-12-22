@@ -4,10 +4,13 @@ class UiWindow : ZilchComponent
   var UiWidget : UiWidget;
   
   
+  [Property]
+  var SizePath : CogPath = CogPath(".");
+  
+  
   var OpenCloseDuration : Real = 0.1;
   
   var TargetSize : Real2;
-  var TargetTopLeft : Real2;
   
   var T_ : Real;
   var T : Real
@@ -18,15 +21,14 @@ class UiWindow : ZilchComponent
     {
       this.T_ = value;
       
-      this.UiWidget.Size = Math.Lerp(Real2.Zero, this.TargetSize, Math.SmoothStep(0, 1, value));
-      this.UiWidget.WorldTopLeft = this.TargetTopLeft;
+      this.SizePath.UiWidget.Size = Math.Lerp(Real2.Zero, this.TargetSize, Math.SmoothStep(0, 1, value));
     }
   }
   
   
   function Initialize(init : CogInitializer)
   {
-    this.TargetSize = this.UiWidget.Size;
+    this.TargetSize = this.SizePath.UiWidget.Size;
     
     Zero.Connect(this.Owner, Events.UiWindowSetup, this.OnUiWindowSetup);
     Zero.Connect(this.Owner, Events.UiWindowDestroyed, this.OnUiWindowDestroyed);
@@ -35,22 +37,22 @@ class UiWindow : ZilchComponent
   
   function OnUiWindowSetup(event : UiWindowEvent)
   {
-    this.UiWidget.Size = Real2.Zero;
+    this.SizePath.UiWidget.Size = Real2.Zero;
     
-    var worldTopLeft = event.WorldTopLeft;
+    //var worldCenter = event.WorldCenter;
     
-    var rootSize = this.UiWidget.Root.Owner.UiWidget.Size;
-    var thisSize = this.TargetSize;
+    //var rootSize = this.UiWidget.Root.Owner.UiWidget.Size;
+    //var thisSize = this.TargetSize;
     
-    var overhangX = worldTopLeft.X + thisSize.X - rootSize.X;
-    var overhangY = worldTopLeft.Y - thisSize.Y;
+    //var overhangX = worldCenter.X + thisSize.X - rootSize.X;
+    //var overhangY = worldCenter.Y - thisSize.Y;
     
-    if (overhangX > 0)
-      worldTopLeft.X -= overhangX;
-    if (overhangY < 0)
-      worldTopLeft.Y -= overhangY;
+    //if (overhangX > 0)
+      //worldCenter.X -= overhangX;
+    //if (overhangY < 0)
+      //worldCenter.Y -= overhangY;
     
-    this.TargetTopLeft = worldTopLeft;
+    //this.TargetCenter = worldCenter;
     
     this.T = 0;
     Action.Property(this.Owner.Actions, @this.T, 1, this.OpenCloseDuration, Ease.Linear);
@@ -65,4 +67,13 @@ class UiWindow : ZilchComponent
     Action.Property(seq, @this.T, 0, this.OpenCloseDuration * this.T_, Ease.Linear);
     Action.Call(seq, this.Owner.Destroy);
   }
+}
+
+
+class UiWindowEvent : ZilchEvent
+{
+  var TitleText : String;
+  var BodyText : String;
+  var WorldCenter : Real2;
+  var Handled : Boolean;
 }

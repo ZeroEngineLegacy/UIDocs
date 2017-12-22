@@ -33,13 +33,13 @@ class RightClickToOpenUiWindow : ZilchComponent
   }
   
   
-  function OpenWindow(worldTopLeft : Real2)
+  function OpenWindow(worldCenter : Real2)
   {
     this.CurrentWindow = this.Space.Create(this.WindowArchetype);
     this.CurrentWindow.AttachToPreserveLocal(this.Owner);
     
     var uwe = UiWindowEvent();
-    uwe.WorldTopLeft = worldTopLeft;
+    uwe.WorldCenter = worldCenter;
     this.CurrentWindow.DispatchEvent(Events.UiWindowSetup, uwe);
   }
   
@@ -52,11 +52,4 @@ class RightClickToOpenUiWindow : ZilchComponent
     if (!uwe.Handled)
       this.CurrentWindow.Destroy();
   }
-}
-
-
-class UiWindowEvent : ZilchEvent
-{
-  var WorldTopLeft : Real2;
-  var Handled : Boolean;
 }
