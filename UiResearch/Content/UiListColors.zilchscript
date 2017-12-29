@@ -4,6 +4,7 @@ class UiListColors : ZilchComponent
   [Dependency] var UiWidget : UiWidget;
   
   
+  [Property] var ContentPath : CogPath = CogPath(".");
   [Property] var EvenColor : Real4 = Color.FromHexString("3D3D3D");
   [Property] var OddColor : Real4 = Color.FromHexString("424242");
   
@@ -12,9 +13,9 @@ class UiListColors : ZilchComponent
   {
     this.ColorAllElements();
     
-    Zero.Connect(this.Owner, Events.ChildAttached, this.OnChildrenChanged);
-    Zero.Connect(this.Owner, Events.ChildDetached, this.OnChildrenChanged);
-    Zero.Connect(this.Owner, Events.ChildrenOrderChanged, this.OnChildrenChanged);
+    Zero.Connect(this.ContentPath.Cog, Events.ChildAttached, this.OnChildrenChanged);
+    Zero.Connect(this.ContentPath.Cog, Events.ChildDetached, this.OnChildrenChanged);
+    Zero.Connect(this.ContentPath.Cog, Events.ChildrenOrderChanged, this.OnChildrenChanged);
   }
 
   function OnChildrenChanged(event : Event)
@@ -27,7 +28,7 @@ class UiListColors : ZilchComponent
   {
     var odd = false;
     
-    foreach (var child in this.Owner.Children)
+    foreach (var child in this.ContentPath.Cog.Children)
     {
       var widget = child.UiWidget;
       

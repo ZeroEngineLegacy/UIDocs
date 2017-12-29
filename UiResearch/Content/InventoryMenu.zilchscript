@@ -16,8 +16,9 @@ class InventoryMenu : ZilchComponent
   {
     //this.CreateMenuItemsFromList();
     this.CreateMenuItemsFromChildren();
-    //this.MenuItemsPath.UiWidget.
     //this.MenuItemsPath.UiWidget.SizeToContents();
+    
+    this.FixMenuSize();
   }
   
   
@@ -54,5 +55,12 @@ class InventoryMenu : ZilchComponent
       me.Type     = child.InventoryItemInterface.Type;
       menuItem.DispatchEvent(Events.InventoryItemSetup, me);
     }
+  }
+  
+  
+  function FixMenuSize()
+  {
+    this.MenuItemsPath.UiWidget.Size = Real2.PositiveMax;
+    this.MenuItemsPath.UiWidget.SizeToContents();
   }
 }
