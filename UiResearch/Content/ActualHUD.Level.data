@@ -2279,7 +2279,7 @@ Level
 				}
 				UiWidget 
 				{
-					var Active = true
+					var Active = false
 					var Visible = true
 					var Interactive = true
 					var InLayout = true

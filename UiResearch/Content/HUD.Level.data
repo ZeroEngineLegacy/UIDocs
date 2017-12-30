@@ -48,9 +48,9 @@ Level
 		var Name = "EditorCamera"
 		Transform 
 		{
-			var Translation = Real3{291, -127, 10}
+			var Translation = Real3{291, -127, 0.0099963164}
 			var Scale = Real3{1, 1, 1}
-			var Rotation = Quaternion{0, 0, 0, 1}
+			var Rotation = Quaternion{0, -1.09278471e-08, 0, 1}
 		}
 		CameraViewport 
 		{
@@ -101,7 +101,7 @@ Level
 			var FarPlane = 100
 			var PerspectiveMode = PerspectiveMode.Orthographic
 			var FieldOfView = 45
-			var Size = 966
+			var Size = 755
 		}
 		EditorCameraController 
 		{
@@ -599,12 +599,6 @@ Level
 										var PathPreference0 = CogPathPreference.CogRelative
 										var PathPreference1 = CogPathPreference.SpaceRelative
 										var PathPreference2 = CogPathPreference.Absolute
-									}
-								}
-								Inventory 
-								{
-									var Items = Array[InventoryItem]
-									{
 									}
 								}
 								InventoryMenu 

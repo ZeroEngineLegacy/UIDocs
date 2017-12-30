@@ -1,17 +1,7 @@
 class Inventory : ZilchComponent
 {
   [Property]
-  var Items = Array[InventoryItem]()
-  {
-    InventoryItem() { Name = "Potion",         Quantity = 10, Type = ItemType.Consumable },
-    InventoryItem() { Name = "Antidote",       Quantity =  4, Type = ItemType.Consumable },
-    InventoryItem() { Name = "Smelling Salts", Quantity =  2, Type = ItemType.Consumable },
-    InventoryItem() { Name = "Longsword",      Quantity =  1, Type = ItemType.Weapon },
-    InventoryItem() { Name = "Dagger",         Quantity =  1, Type = ItemType.Weapon },
-    InventoryItem() { Name = "Leather Cap",    Quantity =  1, Type = ItemType.Armor },
-    InventoryItem() { Name = "Chain Shirt",    Quantity =  1, Type = ItemType.Armor },
-    InventoryItem() { Name = "Frost Ring",     Quantity =  2, Type = ItemType.Accessory },
-  };
+  var Items : Array[InventoryItem];
 }
 
 
